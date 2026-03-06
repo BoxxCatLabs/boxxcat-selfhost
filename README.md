@@ -1,8 +1,8 @@
-# boxxcat-selfhost
+# boxxcat-community
 
 > This repository is **archived**.
 
-This project was originally released as **BetterBoxx**, a Node.js chatbot designed to integrate with KakaoTalk messaging clients. It has since been renamed to **boxxcat-selfhost** and is no longer under active development.
+This project was originally released as **BetterBoxx**, a Node.js chatbot designed to integrate with KakaoTalk messaging clients. It has since been renamed to **boxxcat-community** and is no longer under active development.
 
 We are keeping this repository available for **historical reference and self-hosting enthusiasts**, but it will **not receive further updates**.
 
@@ -54,13 +54,13 @@ should make the client work out of the box.
 Clone the repository:
 
 ```bash
-git clone https://github.com/BoxxCatLabs/boxxcat-selfhost.git
-````
+git clone https://github.com/BoxxCatLabs/boxxcat-community.git
+```
 
 Navigate to the directory and install dependencies:
 
 ```bash
-cd boxxcat-selfhost
+cd boxxcat-community
 npm install
 ```
 
@@ -75,15 +75,15 @@ Before running the chatbot, configure environment variables.
 Rename `.env.example` to `.env` and set your OpenAI API key.
 
 ```
-OPENAI_API=YOUR_API_KEY
-PORT=YOUR_PORT # optional
+OPENAI_API="Bearer YOUR_OPENAI_API_KEY"
+PORT="3000" # optional
 ```
 
 Room authentication can be enabled using:
 
 ```
-USE_AUTH=TRUE
-AUTH_ROOM=ROOM_ID_1,ROOM_ID_2,ROOM_ID_3
+USE_AUTH=true
+AUTH_ROOM="ROOM_ID_1,ROOM_ID_2,ROOM_ID_3"
 ```
 
 For additional security, it is recommended to rename room identifiers with random strings when configuring the client.
@@ -112,16 +112,10 @@ The server will listen on the port defined in `.env` (default: `3000`).
 
 Commands are triggered by specific prefixes.
 
-A help module is included and can be accessed using:
+Features include:
 
-```
-/?
-```
-
-Other features include:
-
-* `Ping!` → replies with `Pong!`
-* Messages prefixed with `>>` are forwarded to the OpenAI API and return AI-generated responses.
+- `Ping!` → replies with `Pong!`
+- Messages prefixed with `>>` are forwarded to the OpenAI API and return AI-generated responses.
 
 ---
 
@@ -129,7 +123,10 @@ Other features include:
 
 Plugins can extend the chatbot with additional functionality.
 
-You will have to write your own plugins.
+**Bundled plugin:**
+- `openai-gpt` – Forwards messages prefixed with `>>` to OpenAI's `gpt-4o-mini` model and replies with the AI response.
+
+You can write your own plugins.
 
 ---
 
@@ -153,10 +150,10 @@ To build your own plugin:
 2. Add a JavaScript file with the plugin name
 3. Implement plugin metadata and handlers such as:
 
-* `name`
-* `version`
-* `onLoad`
-* `onMessage`
+- `name`
+- `version`
+- `onLoad`
+- `onMessage`
 
 The `openai-gpt` plugin included in this repository can be used as a reference implementation.
 
@@ -181,7 +178,7 @@ You are free to use, modify, and distribute the code.
 
 # Final Note
 
-This project represents an **early generation of the boxxcat chatbot ecosystem**.
+This project represents an **early generation of the BetterBoxx chatbot ecosystem**.
 
 For the **actively maintained version**, improved infrastructure, and hosted services, visit:
 
