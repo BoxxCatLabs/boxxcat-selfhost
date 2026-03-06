@@ -1,0 +1,23 @@
+{
+  "name": "openai-gpt",
+  "version": "1.0.1",
+  "description": "# Overview The OpenAI GPT Plugin integrates powerful language model capabilities provided by OpenAI into your application. This plugin allows you to leverage the GPT models for a variety of tasks such as text generation, completion, and contextual understanding.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetterBoxx/openai-gpt.git"
+  },
+  "author": "Shane Lx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BetterBoxx/openai-gpt/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/BetterBoxx/openai-gpt#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
